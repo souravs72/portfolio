@@ -233,24 +233,28 @@
     <!--Contact Section-->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-      <form action="#">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="redirect" value="https://souravs72.github.io/portfolio">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="1d8ea877-6203-49c7-a1ff-c9ddcd640b27">
         <div class="input-box">
-          <input type="text" , placeholder="Full Name" />
-          <input type="email" , placeholder="Email Address" />
+          <input type="text" name="user_name" id="name" placeholder="Full Name" />
+          <input type="email" id="email_id" name="user_email" placeholder="Email Address" />
         </div>
 
         <div class="input-box">
-          <input type="number" , placeholder="Mobile Number" />
-          <input type="text" , placeholder="Email Subject" />
+          <input type="number" name="user_number" placeholder="Mobile Number" />
+          <input type="text" id="subject" name="user_subject" placeholder="Email Subject" />
         </div>
         <textarea
-          name=""
-          id=""
+          name="message"
+          id="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <button type="submit" value="Send Message" class="btn">Send Message</button>
       </form>
     </section>
 
@@ -263,6 +267,11 @@
         <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
       </div>
     </footer>
+
+
+    <!-- Email Sender -->
+    
+
 
     <!-- Scroll JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
