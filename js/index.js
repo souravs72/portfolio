@@ -1,54 +1,59 @@
-/* ============================ toggle navbar========================*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+/* ============================ Toggle Navbar =========================== */
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const header = document.querySelector('header');
 
-menuIcon.onclick = () => {
+menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active')
-}
+    navbar.classList.toggle('active');
+});
 
-/*====================================scroll section =============================*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+/* ============================ Scroll Handling =========================== */
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
 
-window.onscroll = () => {
+const handleScroll = () => {
+    let top = window.scrollY;
+
     sections.forEach(sec => {
-        let top = window.scrollY;
-        let  offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach.apply(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*='+ id + ']').classList.add('active');
-            });
-        };
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            let activeLink = document.querySelector(`header nav a[href*='${id}']`);
+            if (activeLink) activeLink.classList.add('active');
+        }
     });
-    
-    /* =======================sticky navbar ===============================*/
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
 
-    /* =======================remove toggle icon and navbar =============================*/
+    /* Sticky Navbar */
+    header.classList.toggle('sticky', top > 100);
+
+    /* Remove Toggle Icon and Navbar on Scroll */
     menuIcon.classList.remove('fa-xmark');
     navbar.classList.remove('active');
 };
 
-/*================================= scroll reveal ============================================*/
-ScrollReveal({ 
-    distance: '80px',
-    duration: 2000,
-    delay: 200,
+/* Optimize scroll event listener */
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(handleScroll);
 });
 
-ScrollReveal().reveal('.home-content, heading', {origin: 'top'});
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
-ScrollReveal().reveal('home-contact h1, .about-img', {origin: 'left'});
-ScrollReveal().reveal('.home-contact p, .about-content', {origin: 'right'});
+/* ============================ Scroll Reveal =========================== */
+ScrollReveal({
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
 
-/* ========================== typed js =======================================================*/
-const typed = new Typed('.multiple-text', {
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-contact h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-contact p, .about-content', { origin: 'right' });
+
+/* ============================ Typed.js =========================== */
+new Typed('.multiple-text', {
     strings: ['Frontend Developer', 'Backend Developer', 'Problem Solver'],
     typeSpeed: 70,
     backSpeed: 70,
