@@ -4,10 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Font Awesome -->
+  
+  <!-- Performance Meta Tags -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#191f36" />
+  
+  <!-- Performance Optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="style/styles.css" as="style" />
+  <link rel="preload" href="img/profile-photo.JPG" as="image" />
+  
+  <!-- Font Awesome with Optimization -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style/styles.css" />
@@ -36,18 +54,26 @@
       <h1>Sourav Singh</h1>
       <h3>And I'm a <span class="multiple-text"></span></h3>
       <p>
-        Experienced Software developer specializing in frontend, backend
-        development and in client support. Proven skills in designing scalable
-        Java, JavaScript applications and resolving client incidents.
+        Backend-focused developer experienced with Spring Boot, Spring MVC, Spring Integration, and REST APIs.
+        I deliver end-to-end features across frontend and backend with a strong client support orientation and
+        have recently been building rapid business apps and custom workflows on Frappe/ERPNext.
       </p>
+      <ul class="home-highlights">
+        <li>Spring Boot • REST APIs</li>
+        <li>Frappe/ERPNext Workflows</li>
+        <li>Open Source Projects</li>
+      </ul>
       <div class="social-media">
-        <a href="https://www.facebook.com/Souravs72" target="”_blank”"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://twitter.com/singh_sour72" target="”_blank”"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/sourav-singh-060b31135/" target="”_blank”"><i
+        <a href="https://www.facebook.com/Souravs72" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/singh_sour72" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/sourav-singh-060b31135/" target="_blank" rel="noopener noreferrer"><i
             class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/singh_sourav72/" target="”_blank”"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/singh_sourav72/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
       </div>
-      <a href="pdf/SouravResume.pdf" class="btn" download>Download CV</a>
+      <div class="home-cta">
+        <a href="#portfolio" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
     </div>
 
     <div class="home-img">
@@ -59,18 +85,61 @@
 
   <section class="about" id="about">
     <div class="about-img">
-      <img src="img/about-pic.jpg" alt="About picture" loading="lazy" width="400" height="400" />
+      <img src="img/about-pic.jpeg" alt="About picture" loading="lazy" />
     </div>
     <div class="about-content">
       <h2 class="heading">About <span>Me</span></h2>
       <h3>Software Developer</h3>
       <h4>Assistant System Engineer, TCS (Former)</h4>
-      <p>
-        Worked as a backend developer on a web development domain project,
-        specializing in Spring Boot, Spring MVC, and Spring Integration, with
-        a focus on multithreading for project development.
-      </p>
-      <a href="#" class="btn">Read more</a>
+
+      <div class="about-accordion">
+        <details open>
+          <summary>Professional Summary</summary>
+          <div class="about-panel">
+            <p>
+              Backend-focused developer experienced with Spring Boot, Spring MVC, Spring Integration, and REST APIs.
+              Delivering end-to-end features across frontend and backend with strong client support orientation.
+              Recently building rapid business apps and custom workflows on Frappe/ERPNext.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Core Competencies</summary>
+          <div class="about-panel">
+            <ul class="about-list">
+              <li>Java, Spring Boot, Spring MVC, Spring Integration</li>
+              <li>REST API design, microservices, distributed systems</li>
+              <li>Frappe/ERPNext custom DocTypes, server scripts, workflows</li>
+              <li>Automation, incident resolution, client-facing delivery</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Key Achievements</summary>
+          <div class="about-panel">
+            <ul class="about-list">
+              <li>Built a production task and automation system in Spring Boot serving 7,000+ users</li>
+              <li>Shipped multiple open-source projects (see Portfolio section)</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Education & Certifications</summary>
+          <div class="about-panel">
+            <p>
+              See full details in my CV. Download the latest version below.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="about-cta">
+        <a href="pdf/SouravResume.pdf" class="btn" download>Download CV</a>
+        <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+      </div>
     </div>
   </section>
 
@@ -88,6 +157,16 @@
           Back-end developers focus on the database, back-end logic,
           application programming interface (APIs), architecture, and servers
           to ensure the website performs correctly.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+        <i class="fa-solid fa-cubes"></i>
+        <h3>Frappe / ERPNext Development</h3>
+        <p>
+          Custom DocTypes, server scripts, workflows, and REST integrations on Frappe/ERPNext.
+          Build dashboards and automate business processes with rapid iterations.
         </p>
         <a href="#" class="btn">Read More</a>
       </div>
@@ -126,111 +205,75 @@
     <h2 class="heading">Latest <span>Projects</span></h2>
     <div class="portfolio-container">
       <div class="portfolio-box">
-        <img src="img/1.jpg" alt="" />
+        <img src="img/1.jpg" alt="OrigoStack Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>My Portfolio</h4>
+          <h4>OrigoStack</h4>
           <p>
-            My portfolio showcases my skills, experience, and projects, giving
-            insight into who I am. It includes a contact section for easy
-            communication, enabling opportunities to connect and collaborate
-            effectively.
+            Open, polyglot foundation to experiment and ship robust real-time systems with confidence.
           </p>
-          <a href="https://github.com/Souravs72/Portfolio"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/OrigoStack" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="portfolio-box">
-        <img src="img/2.jpg" alt="" />
+        <img src="img/2.jpg" alt="Distributed Chat App Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>Play Chess!</h4>
+          <h4>Distributed Chat App</h4>
           <p>
-            My chess game project employs HTML, CSS, and JavaScript for an
-            interactive gaming experience. Features include board rendering,
-            piece movements, logic, and an intuitive user interface for
-            enjoyable gameplay.
+            Production-ready chat using Spring Boot microservices, designed for scale.
           </p>
-          <a href="https://github.com/Souravs72/chess" target="_blank"><i
-              class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/distributed-chat-app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="portfolio-box">
-        <img src="img/3.jpg" alt="" />
+        <img src="img/3.jpg" alt="Microservices Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>Rat in the Maze</h4>
+          <h4>Microservices Project</h4>
           <p>
-            The Rat in the Maze app solves mazes using algorithms. Navigate
-            mazes, find the optimal path, and visualize solutions dynamically,
-            providing an interactive and educational experience for users
+            Spring Boot based microservices project with core building blocks for service orchestration.
           </p>
-          <a href="workinprogress.html" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/microservices-project" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="portfolio-box">
-        <img src="img/4.jpg" alt="" />
+        <img src="img/4.jpg" alt="WAPSync Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>Care for Pets?</h4>
+          <h4>WAPSync</h4>
           <p>
-            Stay tuned for our upcoming web app revolutionizing veterinary
-            services. Connecting pet lovers with trusted vets seamlessly,
-            making pet care more accessible and convenient. Coming soon!
+            WhatsApp integration for Frappe using WAAPI. Enable messaging workflows inside ERPNext.
           </p>
-          <a href="workinprogress.html" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/WAPSync" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="portfolio-box">
-        <img src="img/5.jpg" alt="" />
+        <img src="img/5.jpg" alt="Frappe Postman Sync Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>Write a Blog!</h4>
+          <h4>Frappe Postman Sync</h4>
           <p>
-            My blog application empowers users to write, comment, and like
-            posts, fostering an engaging community. Explore diverse topics,
-            share insights, and connect with others through meaningful
-            discussions. Join now!
+            Utilities to streamline Frappe REST API testing and collection sync with Postman.
           </p>
-          <a href="https://github.com/Souravs72/techblog.github.io" target="_blank"><i
-              class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/frappe_postman_sync" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="portfolio-box">
-        <img src="img/6.jpg" alt="" />
+        <img src="img/6.jpg" alt="Claude MCP Setup Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>HealthyU | The Fit Club</h4>
+          <h4>Claude MCP Setup</h4>
           <p>
-            Your ultimate workout companion. Explore tailored routines, expert 
-            tips, and interactive tools to achieve your fitness goals. Start 
-            your journey to a healthier you today!
+            Production-ready Model Context Protocol servers: GitHub, Jira, Frappe, web, bash & more.
           </p>
-          <a href="https://healthyu.pages.dev/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/claude-mcp-setup" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!--Contact Section-->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="redirect" value="https://souravs72.github.io/portfolio">
-
-      <!-- Replace with your Access Key -->
-      <input type="hidden" name="access_key" value="1d8ea877-6203-49c7-a1ff-c9ddcd640b27">
-      <div class="input-box">
-        <input type="text" name="user_name" id="name" placeholder="Full Name" />
-        <input type="email" id="email_id" name="user_email" placeholder="Email Address" />
-      </div>
-
-      <div class="input-box">
-        <input type="number" name="user_number" placeholder="Mobile Number" />
-        <input type="text" id="subject" name="user_subject" placeholder="Email Subject" />
-      </div>
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <button type="submit" value="Send Message" class="btn">Send Message</button>
-    </form>
-  </section>
+  <!--Contact Section (loaded via partial) -->
+  <section class="contact" id="contact"></section>
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -248,13 +291,16 @@
 
 
   <!-- Scroll JS -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/scrollreveal" defer></script>
 
   <!-- Typed Js-->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+  <!-- Contact partial loader -->
+  <script src="js/contact.js" defer></script>
 
   <!-- MAIN js -->
-  <script src="js/index.js"></script>
+  <script src="js/index.js" defer></script>
 </body>
 
 </html>
