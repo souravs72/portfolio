@@ -15,11 +15,7 @@ Static personal portfolio for Sourav Singh, deployed on GitHub Pages.
 
 ## Local Development
 
-Open `index.html` in a browser, or serve locally:
-
-```bash
-python3 -m http.server 5500
-```
+Open `index.html` in a browser, or serve locally.
 
 ## License
 
