@@ -3,8 +3,3 @@ Allow: /
 
 Sitemap: https://www.souravsingh.online/sitemap.xml
 
-User-agent: *
-Allow: /
-
-Sitemap: https://www.souravsingh.online/sitemap.xml
-

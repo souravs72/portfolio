@@ -51,83 +51,18 @@ img {
   content-visibility: auto;
 }
 
-:root {
-  --bg-color: #191f36;
-  --snd-bg-color: #262b40;
-  --text-color: #fff;
-  --main-color: #59b2f4;
-}
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
 body {
-  /* Design tokens scoped to the whole document */
-  --bg-color: #191f36;
-  --snd-bg-color: #262b40;
-  --text-color: #ffffff;
-  --muted-text-color: rgba(255, 255, 255, 0.72);
-  --main-color: #59b2f4;
-
-  /* 8px spacing scale (1rem = 10px) */
-  --space-2: 0.8rem;
-  --space-4: 1.6rem;
-  --space-6: 2.4rem;
-  --space-8: 3.2rem;
-  --space-12: 4.8rem;
-  --space-16: 6.4rem;
-  --space-24: 9.6rem;
-
-  --container-max-width: 1120px;
-  --container-inline-padding: var(--space-6);
-
-  --radius-sm: 0.8rem;
-  --radius-md: 1.2rem;
-  --radius-lg: 1.6rem;
-
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.45);
-
-  --transition-fast: all 0.2s ease;
-  --transition-md: all 0.3s ease;
-
   background: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-:root {
-  --bg-color: #191f36;
-  --snd-bg-color: #262b40;
-  --text-color: #ffffff;
-  --muted-text-color: rgba(255, 255, 255, 0.72);
-  --main-color: #59b2f4;
-
-  /* 8px spacing scale (1rem = 10px) */
-  --space-2: 0.8rem;
-  --space-4: 1.6rem;
-  --space-6: 2.4rem;
-  --space-8: 3.2rem;
-  --space-12: 4.8rem;
-  --space-16: 6.4rem;
-  --space-24: 9.6rem;
-
-  --container-max-width: 1120px;
-  --container-inline-padding: var(--space-6);
-
-  --radius-sm: 0.8rem;
-  --radius-md: 1.2rem;
-  --radius-lg: 1.6rem;
-
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.45);
-
-  --transition-fast: all 0.2s ease;
-  --transition-md: all 0.3s ease;
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -351,6 +286,9 @@ span {
 }
 .about {
   background: var(--snd-bg-color);
+  /* Override global section vertical centering so image/content stay pinned
+     in place when accordion panels open/close */
+  justify-content: flex-start;
 }
 
 .about-layout {
