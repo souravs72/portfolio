@@ -253,9 +253,8 @@ span {
 }
 
 .home-img img {
-  width: clamp(24rem, 30vw, 34rem);
-  max-width: 100%;
-  border-radius: 50%;
+  max-width: 25vw;
+  border-radius: 20rem;
   animation: floatImage 4s ease-in-out infinite;
   will-change: transform;
 }
