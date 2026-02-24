@@ -30,22 +30,31 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style/styles.css" />
-  <title>Sourav Singh | Software Engineer | @souravs72</title>
-  <meta name="description" content="Official website of Sourav Singh, software engineer specializing in Spring Boot, REST APIs, and Frappe/ERPNext. View projects, experience, and contact details." />
+
+  <!-- Primary SEO tags -->
+  <title>Sourav Singh – Software Engineer | Backend &amp; Full‑Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Sourav Singh, software engineer and backend &amp; full‑stack developer specializing in Spring Boot, REST APIs, distributed systems, and Frappe/ERPNext. Explore projects, experience, and contact details." />
+  <meta name="keywords"
+    content="Sourav Singh, souravs72, software engineer, backend engineer, full stack developer, Spring Boot, REST APIs, distributed systems, Frappe, ERPNext, portfolio" />
+  <meta name="author" content="Sourav Singh" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.souravsingh.online/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.souravsingh.online/" />
-  <meta property="og:title" content="Sourav Singh | Software Engineer" />
-  <meta property="og:description" content="Software engineer focused on Spring Boot, REST APIs, and Frappe/ERPNext. Explore projects and get in touch." />
+  <meta property="og:title" content="Sourav Singh – Software Engineer Portfolio" />
+  <meta property="og:description"
+    content="Portfolio of Sourav Singh, software engineer specializing in backend systems, full‑stack development, and scalable architecture with Spring Boot, REST APIs, and Frappe/ERPNext." />
   <meta property="og:image" content="https://www.souravsingh.online/img/profile-photo.JPG" />
   <meta property="og:site_name" content="Sourav Singh" />
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sourav Singh | Software Engineer" />
-  <meta name="twitter:description" content="Software engineer focused on Spring Boot, REST APIs, and Frappe/ERPNext. Explore projects and get in touch." />
+  <meta name="twitter:title" content="Sourav Singh – Software Engineer Portfolio" />
+  <meta name="twitter:description"
+    content="Portfolio of Sourav Singh, software engineer and backend &amp; full‑stack developer focused on scalable systems, Spring Boot, REST APIs, and Frappe/ERPNext." />
   <meta name="twitter:image" content="https://www.souravsingh.online/img/profile-photo.JPG" />
   <meta name="twitter:site" content="@singh_sour72" />
   <meta property="og:locale" content="en_US" />
@@ -55,20 +64,24 @@
   <link rel="me" href="https://www.linkedin.com/in/sourav72/" />
   <link rel="me" href="https://twitter.com/singh_sour72" />
 
-  <!-- Schema.org Person -->
+  <!-- Schema.org Person (helps Google show your profile for name/username searches) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sourav Singh",
+    "alternateName": ["Sourav", "souravs72", "Souravs72", "@souravs72", "singh_sour72", "Sourav Singh (souravs72)"],
     "url": "https://www.souravsingh.online/",
     "image": "https://www.souravsingh.online/img/profile-photo.JPG",
-    "jobTitle": "Software Engineer",
+    "jobTitle": "Software Engineer & Backend Engineer",
+    "description": "Sourav Singh is a software engineer, backend engineer, and full-stack developer focused on Spring Boot, REST APIs, distributed systems, and Frappe/ERPNext.",
     "email": "souravsingh2609@gmail.com",
     "sameAs": [
       "https://github.com/souravs72",
       "https://www.linkedin.com/in/sourav72/",
-      "https://twitter.com/singh_sour72"
+      "https://twitter.com/singh_sour72",
+      "https://www.facebook.com/Souravs72",
+      "https://www.instagram.com/singh_sourav72/"
     ]
   }
   </script>
@@ -79,7 +92,14 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": "https://www.souravsingh.online/",
-    "name": "Sourav Singh",
+    "name": "Sourav Singh - souravs72",
+    "alternateName": ["Sourav Singh Portfolio", "souravs72 portfolio"],
+    "description": "Official portfolio of Sourav Singh (souravs72), Software Engineer.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Sourav Singh",
+      "alternateName": "souravs72"
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://www.google.com/search?q={search_term_string}",
@@ -91,24 +111,29 @@
 
 <body>
   <header class="header">
-    <a href="#" class="logo">Portfolio</a>
+    <div class="container header-inner">
+      <a href="#home" class="logo">Portfolio</a>
 
-    <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-bars" id="menu-icon" aria-label="Toggle navigation menu"></i>
 
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="navbar" aria-label="Primary">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
+  <main>
   <!-- Home section design-->
   <section class="home" id="home">
-    <div class="home-content">
+    <div class="container home-layout">
+      <div class="home-content">
       <h3>Hi, Myself</h3>
-      <h1>Sourav Singh</h1>
+      <h1>Sourav Singh – Software Engineer</h1>
+      <p class="home-handle">@souravs72</p>
       <h3>And I'm a <span class="multiple-text"></span></h3>
       <p>
         Backend-focused developer experienced with Spring Boot, Spring MVC, Spring Integration, and REST APIs.
@@ -130,21 +155,23 @@
       <div class="home-cta">
         <a href="#portfolio" class="btn">View Projects</a>
         <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
       </div>
-    </div>
 
-    <div class="home-img">
-      <img src="img/profile-photo.JPG" alt="My profile pic" loading="lazy" fetchpriority="high" />
+      <div class="home-img">
+        <img src="img/profile-photo.JPG" alt="Portrait of Sourav Singh" loading="lazy" fetchpriority="high" />
+      </div>
     </div>
   </section>
 
   <!-- About section-->
 
   <section class="about" id="about">
-    <div class="about-img">
-      <img src="img/about-pic.jpeg" alt="About picture" loading="lazy" />
-    </div>
-    <div class="about-content">
+    <div class="container about-layout">
+      <div class="about-img">
+        <img src="img/about-pic.jpeg" alt="Sourav Singh speaking about software development" loading="lazy" />
+      </div>
+      <div class="about-content">
       <h2 class="heading">About <span>Me</span></h2>
       <h3>Software Developer</h3>
       <h4>Assistant System Engineer, TCS (Former)</h4>
@@ -196,62 +223,58 @@
       <div class="about-cta">
         <a href="pdf/Resume.pdf" class="btn" download>Download CV</a>
         <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- Services Section -->
   <section class="services" id="services">
-    <h2 class="heading">My <span>Services</span></h2>
-    <div class="services-container">
-      <div class="services-box">
-        <i class="fa-solid fa-server"></i>
-        <!-- <i class="fa-solid fa-code"></i> -->
-        <h3>Backend Development</h3>
-        <p>
-          Back-end development is the server-side logic that powers websites
-          and apps, including everything that's not visible on the page.
-          Back-end developers focus on the database, back-end logic,
-          application programming interface (APIs), architecture, and servers
-          to ensure the website performs correctly.
-        </p>
-        <a href="#" class="btn">Read More</a>
-      </div>
+    <div class="container">
+      <h2 class="heading">My <span>Services</span></h2>
+      <div class="services-container">
+        <!-- 1. Backend -->
+        <div class="services-box">
+          <i class="fa-solid fa-server"></i>
+          <h3>Backend Development</h3>
+          <p>
+            Design and implement robust APIs, microservices, and integrations using Java, Spring Boot, and REST.
+            Focus on reliability, observability, and clean domain boundaries so systems scale smoothly.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
 
-      <div class="services-box">
-        <i class="fa-solid fa-cubes"></i>
-        <h3>Frappe / ERPNext Development</h3>
-        <p>
-          Custom DocTypes, server scripts, workflows, and REST integrations on Frappe/ERPNext.
-          Build dashboards and automate business processes with rapid iterations.
-        </p>
-        <a href="#" class="btn">Read More</a>
-      </div>
+        <!-- 2. Frontend -->
+        <div class="services-box">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Frontend Development</h3>
+          <p>
+            Build responsive, accessible UIs that feel fast and intuitive on any device using modern HTML, CSS, and
+            JavaScript. Translate product requirements into polished, production‑ready experiences.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
 
-      <div class="services-box">
-        <i class="fa-solid fa-palette"></i>
-        <h3>Frontend Development</h3>
-        <p>
-          The process of building the visual and interactive parts of a
-          website or application that users see and interact with. This
-          includes buttons, text boxes, graphics, and login buttons. Front-end
-          developers use web languages like HTML, CSS, and JavaScript to
-          create the design elements that users see when they visit a website.
-        </p>
-        <a href="#" class="btn">Read More</a>
-      </div>
+        <!-- 3. Cloud / AWS -->
+        <div class="services-box">
+          <i class="fa-solid fa-cloud"></i>
+          <h3>Cloud &amp; AWS Infrastructure</h3>
+          <p>
+            Design, deploy, and operate services on AWS with a focus on reliability and cost efficiency. Use managed
+            services, CI/CD pipelines, and infrastructure‑as‑code to keep deployments repeatable and safe.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
 
-      <div class="services-box">
-        <i class="fa-brands fa-android"></i>
-        <h3>Mobile App Development</h3>
-        <p>
-          The process of creating software for mobile devices like
-          smartphones, tablets, and digital assistants. It involves technical
-          skills, creativity, and problem-solving to turn an idea into a
-          functional app. Kotlin, Flutter, React Native are some of the
-          languages that can be used to develop such applications.
-        </p>
-        <a href="#" class="btn">Read More</a>
+        <!-- 4. Frappe / ERPNext -->
+        <div class="services-box">
+          <i class="fa-solid fa-cubes"></i>
+          <h3>Frappe / ERPNext Solutions</h3>
+          <p>
+            Ship custom DocTypes, server scripts, workflows, and dashboards on Frappe/ERPNext. Automate business
+            processes and integrate external systems via clean, well‑documented REST APIs.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
       </div>
     </div>
   </section>
@@ -259,9 +282,10 @@
   <!-- Portfolio Design -->
 
   <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Projects</span></h2>
-    <div class="portfolio-container">
-      <div class="portfolio-box">
+    <div class="container">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
         <img src="img/1.jpg" alt="OrigoStack Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
           <h4>OrigoStack</h4>
@@ -272,7 +296,7 @@
         </div>
       </div>
 
-      <div class="portfolio-box">
+        <div class="portfolio-box">
         <img src="img/2.jpg" alt="Distributed Chat App Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
           <h4>Distributed Chat App</h4>
@@ -283,7 +307,7 @@
         </div>
       </div>
 
-      <div class="portfolio-box">
+        <div class="portfolio-box">
         <img src="img/3.jpg" alt="Microservices Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
           <h4>Microservices Project</h4>
@@ -294,18 +318,18 @@
         </div>
       </div>
 
-      <div class="portfolio-box">
+        <div class="portfolio-box">
         <img src="img/4.jpg" alt="WAPSync Project Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
-          <h4>WAPSync</h4>
+          <h4>CG Notification</h4>
           <p>
             WhatsApp integration for Frappe using WAAPI. Enable messaging workflows inside ERPNext.
           </p>
-          <a href="https://github.com/souravs72/WAPSync" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/souravs72/cg-notification" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
       </div>
 
-      <div class="portfolio-box">
+        <div class="portfolio-box">
         <img src="img/5.jpg" alt="Frappe Postman Sync Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
           <h4>Frappe Postman Sync</h4>
@@ -316,7 +340,7 @@
         </div>
       </div>
 
-      <div class="portfolio-box">
+        <div class="portfolio-box">
         <img src="img/6.jpg" alt="Claude MCP Setup Preview" loading="lazy" decoding="async" />
         <div class="portfolio-layer">
           <h4>Claude MCP Setup</h4>
@@ -325,12 +349,15 @@
           </p>
           <a href="https://github.com/souravs72/claude-mcp-setup" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
         </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!--Contact Section (loaded via partial) -->
   <section class="contact" id="contact"></section>
+
+  </main>
 
   <!-- Footer Section -->
   <footer class="footer">
