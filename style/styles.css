@@ -718,7 +718,9 @@ span {
     font-size: 5rem;
   }
   .home-img img {
-    width: 70vw;
+    width: 90vw;
+    max-width: 90vw; /* override desktop max-width so image can grow */
+    height: auto;
     margin-top: 4rem;
   }
   .about-layout {
@@ -748,8 +750,10 @@ span {
     grid-template-columns: 1fr;
   }
   .home-img img {
-    width: 80vw;
-    margin-top: 8rem;
+    width:68vw;
+    max-width: 70vw; /* ensure no 25vw cap applies on very small screens */
+    height: auto;
+    margin-top: 6rem;
   }
 }
 @media (max-width: 450px) {
