@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.souravsingh.online/sitemap.xml
+Sitemap: https://souravsingh.site/sitemap.xml
 
